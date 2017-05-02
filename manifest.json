@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+  "name": "Hostname in title",
+  "version": "1.0",
+
+  "description": "Puts the hostname of the tab in the title",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["hostname.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+     "tabs", "*://*/*", "storage"
+  ]
+
+}
